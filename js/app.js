@@ -30,7 +30,7 @@ legend.onAdd = function(map) {
     for (var i = 0; i < grades.length; i++) {
         div.innerHTML +=
             '<div class="legend-point"><i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
-            grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + ' Knoten<br></div>' : '+ Knoten</div>');
+            grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + ' Mazgų<br></div>' : '+ Magų</div>');
     }
 
     return div;
@@ -51,8 +51,8 @@ info.onAdd = function(map) {
 
 // update the info box with the data frome the fields hovered
 info.update = function(props) {
-    this._div.innerHTML = '<h4>Freifunk Rhein Neckar </br>Knoten Einzugsgebiet und Verteilung</h4>' + (props ?
-        '<b>' + props.name + '</b><br />' + props.count + ' Knoten' : 'Fahre über ein Gebiet um mehr zu erfahren');
+    this._div.innerHTML = '<h4>Kiwinet mesh WiFi </br>mazgų paskirstymo žemėlapis</h4>' + (props ?
+        '<b>' + props.name + '</b><br />' + props.count + ' Mazgai' : 'Pasirinkite norima vietovė.');
 };
 
 // add info element to map
